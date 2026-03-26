@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"features\/acceso-post[1:6]","start":1774494750103,"end":1774494750845,"title":"features\/acceso-post[1:6] 22:12:30.103-22:12:30.845 Login exitoso","className":"failed"},{"id":2,"group":1,"content":"features\/acceso-post[2:14]","start":1774494750849,"end":1774494751425,"title":"features\/acceso-post[2:14] 22:12:30.849-22:12:31.425 Login fallido","className":"failed"},{"id":3,"group":1,"content":"features\/usuarios-delete[1:8]","start":1774494748858,"end":1774494749455,"title":"features\/usuarios-delete[1:8] 22:12:28.858-22:12:29.455 Eliminar usuario existente","className":"failed"},{"id":4,"group":1,"content":"features\/usuarios-delete[2:14]","start":1774494749459,"end":1774494750043,"title":"features\/usuarios-delete[2:14] 22:12:29.459-22:12:30.043 Eliminar usuario con ID inexistente","className":"failed"},{"id":5,"group":1,"content":"features\/usuarios-get-by-id[1:8]","start":1774494747251,"end":1774494748160,"title":"features\/usuarios-get-by-id[1:8] 22:12:27.251-22:12:28.160 Buscar usuario existente por ID","className":"failed"},{"id":6,"group":1,"content":"features\/usuarios-get-by-id[2:14]","start":1774494748175,"end":1774494748794,"title":"features\/usuarios-get-by-id[2:14] 22:12:28.175-22:12:28.794 Buscar usuario con ID inexistente","className":"failed"},{"id":7,"group":1,"content":"features\/usuarios-get[1:6]","start":1774494745636,"end":1774494746530,"title":"features\/usuarios-get[1:6] 22:12:25.636-22:12:26.530 Obtener lista de todos los usuarios","className":"failed"},{"id":8,"group":1,"content":"features\/usuarios-get[2:14]","start":1774494746537,"end":1774494747145,"title":"features\/usuarios-get[2:14] 22:12:26.537-22:12:27.145 Obtener lista de usuarios con parámetros inválidos","className":"failed"},{"id":9,"group":1,"content":"features\/usuarios-post[1:6]","start":1774494744293,"end":1774494744903,"title":"features\/usuarios-post[1:6] 22:12:24.293-22:12:24.903 Registrar un nuevo usuario con datos válidos","className":"failed"},{"id":10,"group":1,"content":"features\/usuarios-post[2:16]","start":1774494744909,"end":1774494745514,"title":"features\/usuarios-post[2:16] 22:12:24.909-22:12:25.514 Registrar usuario con email existente","className":"failed"},{"id":11,"group":1,"content":"features\/usuarios-put[1:8]","start":1774494741024,"end":1774494742306,"title":"features\/usuarios-put[1:8] 22:12:21.024-22:12:22.306 Actualizar información de usuario existente","className":"failed"},{"id":12,"group":1,"content":"features\/usuarios-put[2:17]","start":1774494742321,"end":1774494743728,"title":"features\/usuarios-put[2:17] 22:12:22.321-22:12:23.728 Actualizar usuario con ID inexistente","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

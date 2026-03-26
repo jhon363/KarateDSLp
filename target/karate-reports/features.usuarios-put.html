@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script type="text/javascript" src="res/Resemble.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.capture("report_feature",{distinct_id:"076f1f17-6363-42e0-b5de-049dc286330c",karate_version:"1.4.1",karate_meta:null});
+  }
+});
+</script>
+
+    <title>features.usuarios-put</title>
+  </head>
+  <body>
+    <div id="root-container">
+      <div id="leftnav">
+        
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">2</div>
+    </div>
+  </div>
+  <div id="nav-env">
+    <div></div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>
+  <div id="nav-date">
+    <div>2026-03-25 10:12:23 p. m.</div>
+  </div>
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[1:8]"><span>[1:8]</span> <span>Actualizar información de usuario existente</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[2:17]"><span>[2:17]</span> <span>Actualizar usuario con ID inexistente</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">features/usuarios-put.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Usuarios API - Actualizar usuario</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:8]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:8]</span>
+                <span class="scenario-name">Actualizar información de usuario existente</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>1271</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1:8]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:8]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url &#39;https://serverest.dev/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">51</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:8]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def usuario = call read(&#39;usuarios-post.feature@Registrar un nuevo usuario con datos válidos&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">53</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  <div>
+        
+    <div class="step-row">
+      <div class="step-container" id="0.5.0.call">
+        <div class="step-ref bg-step">&gt;&gt;</div>
+        <div class="step-indent"></div>
+        <div class="step-cell passed">features.usuarios-post</div>
+      </div>
+      <div class="time-cell passed">0</div>
+    </div>
+        
+  </div>
+
+</div>
+</div>
+          <div data-parent="[1:8]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def userId = usuario._id</span>
+      </div>
+    </div>
+    <div class="time-cell passed">7</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref passed">9</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;usuarios&#39;, userId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">12</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref passed">10</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def random = Math.floor(Math.random()*10000)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">9</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.11">
+      <div class="step-ref passed">11</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def email = &#39;usuario.qa.actualizado.&#39; + random + &#39;@mail.com&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">7</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref passed">12</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request { nome: &#39;Usuario QA Actualizado&#39;, email: email, password: &#39;654321&#39;, administrador: &#39;false&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">36</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref passed">13</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method put</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1082</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.13">22:12:21.600 request:
+1 &gt; PUT https://serverest.dev/usuarios
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 93
+1 &gt; Host: serverest.dev
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.26)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;nome&quot;:&quot;Usuario QA Actualizado&quot;,&quot;email&quot;:&quot;email&quot;,&quot;password&quot;:&quot;654321&quot;,&quot;administrador&quot;:&quot;false&quot;}
+
+22:12:22.289 response time in milliseconds: 687
+1 &lt; 405
+1 &lt; access-control-allow-origin: *
+1 &lt; x-dns-prefetch-control: off
+1 &lt; x-frame-options: SAMEORIGIN
+1 &lt; strict-transport-security: max-age=15552000; includeSubDomains
+1 &lt; x-download-options: noopen
+1 &lt; x-content-type-options: nosniff
+1 &lt; x-xss-protection: 1; mode=block
+1 &lt; content-type: application/json; charset=utf-8
+1 &lt; x-cloud-trace-context: 1dbee5ce60978c68ca0f7368742e4c8b;o=1
+1 &lt; date: Thu, 26 Mar 2026 03:12:32 GMT
+1 &lt; server: Google Frontend
+1 &lt; Content-Length: 146
+{
+    &quot;message&quot;: &quot;Não é possível realizar PUT em /usuarios. Acesse https://serverest.dev para ver as rotas disponíveis e como utilizá-las.&quot;
+}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref passed">14</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 405</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref failed">15</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response.message contains &#39;No es posible realizar PUT en /usuarios&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">13</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.15">22:12:22.307 classpath:features/usuarios-put.feature:15
+And match response.message contains &#39;No es posible realizar PUT en /usuarios&#39;
+match failed: CONTAINS
+  $ | actual does not contain expected (STRING:STRING)
+  &#39;Não é possível realizar PUT em /usuarios. Acesse https://serverest.dev para ver as rotas disponíveis e como utilizá-las.&#39;
+  &#39;No es posible realizar PUT en /usuarios&#39;
+
+classpath:features/usuarios-put.feature:15
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2:17]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2:17]</span>
+                <span class="scenario-name">Actualizar usuario con ID inexistente</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>1407</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2:17]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2:17]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url &#39;https://serverest.dev/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:17]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def usuario = call read(&#39;usuarios-post.feature@Registrar un nuevo usuario con datos válidos&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  <div>
+        
+    <div class="step-row">
+      <div class="step-container" id="0.5.0.call">
+        <div class="step-ref bg-step">&gt;&gt;</div>
+        <div class="step-indent"></div>
+        <div class="step-cell passed">features.usuarios-post</div>
+      </div>
+      <div class="time-cell passed">0</div>
+    </div>
+        
+  </div>
+
+</div>
+</div>
+          <div data-parent="[2:17]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def userId = usuario._id</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.18">
+      <div class="step-ref passed">18</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;usuarios&#39;, &#39;id-invalido-123&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.19">
+      <div class="step-ref passed">19</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request { nome: &#39;Usuario QA&#39;, email: &#39;usuario.qa@mail.com&#39;, password: &#39;123456&#39;, administrador: &#39;true&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method put</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1399</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.20">22:12:22.328 request:
+1 &gt; PUT https://serverest.dev/usuarios/id-invalido-123
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 94
+1 &gt; Host: serverest.dev
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/11.0.26)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;nome&quot;:&quot;Usuario QA&quot;,&quot;email&quot;:&quot;usuario.qa@mail.com&quot;,&quot;password&quot;:&quot;123456&quot;,&quot;administrador&quot;:&quot;true&quot;}
+
+22:12:23.723 response time in milliseconds: 1394
+1 &lt; 400
+1 &lt; access-control-allow-origin: *
+1 &lt; x-dns-prefetch-control: off
+1 &lt; x-frame-options: SAMEORIGIN
+1 &lt; strict-transport-security: max-age=15552000; includeSubDomains
+1 &lt; x-download-options: noopen
+1 &lt; x-content-type-options: nosniff
+1 &lt; x-xss-protection: 1; mode=block
+1 &lt; content-type: application/json; charset=utf-8
+1 &lt; x-cloud-trace-context: 1ec869cb46f80a7fef1aaa7b16225461
+1 &lt; date: Thu, 26 Mar 2026 03:12:33 GMT
+1 &lt; server: Google Frontend
+1 &lt; Content-Length: 53
+{
+    &quot;message&quot;: &quot;Este email já está sendo usado&quot;
+}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.21">
+      <div class="step-ref failed">21</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 201</span>
+      </div>
+    </div>
+    <div class="time-cell failed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.21">22:12:23.729 classpath:features/usuarios-put.feature:21
+Then status 201
+status code was: 400, expected: 201, response time in milliseconds: 1394, url: https://serverest.dev/usuarios/id-invalido-123, response: 
+{
+    &quot;message&quot;: &quot;Este email já está sendo usado&quot;
+}
+classpath:features/usuarios-put.feature:21
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.22">
+      <div class="step-ref skipped">22</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.message == &#39;Proceso realizado con éxito&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
